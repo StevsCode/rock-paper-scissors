@@ -14,7 +14,8 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     // Ask user to type his choice in the prompt
-    const userChoice = prompt("Enter your choice here (rock, paper or scissors):")
+    // Make insensitive to upper or lower case
+    let userChoice = prompt("Enter your choice here (rock, paper or scissors):").toLowerCase().trim();
 
     // Return one of the options based on the input
     if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors") {
@@ -32,10 +33,6 @@ function playGame() {
     let computerScore = 0
 
     function playRound(humanChoice, computerChoice) {
-        // Make insensitive to upper or lower case
-        humanChoice = humanChoice.toLowerCase();
-        computerChoice = computerChoice.toLowerCase();
-    
         // Determine winner
         if (humanChoice === computerChoice) {
             console.log("It's a tie! Both chose " + humanChoice + ".")
