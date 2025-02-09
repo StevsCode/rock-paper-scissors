@@ -12,4 +12,16 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice())
+function getHumanChoice() {
+    // Ask user to type his choice in the prompt
+    const userChoice = prompt("Enter your choice here (rock, paper or scissors):")
+
+    // Return one of the options based on the input
+    if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors") {
+        return userChoice;
+    } else {
+        alert("Oops, invalid choice. Please choose 'rock', 'paper', or 'scissors'.");
+        // Ask question again
+        return getHumanChoice();
+    }
+}
