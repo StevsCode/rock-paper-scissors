@@ -1,0 +1,68 @@
+/* Aggiungi uno sfondo piacevole e una dimensione del testo chiara */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Crea una box centrata per il gioco */
+#game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+}
+
+/* Modifica il titolo per farlo risaltare */
+h1 {
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Design dei pulsanti */
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Stile per il risultato e punteggio */
+#results {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #333;
+}
+
+#score {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Crea una sezione di gioco che visualizza i pulsanti in una riga */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
